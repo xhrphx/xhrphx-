@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-16 20:55:10" itemprop="dateModified" datetime="2019-05-16T20:55:10+08:00">2019-05-16</time>
+                <time title="Modified: 2019-05-16 21:18:44" itemprop="dateModified" datetime="2019-05-16T21:18:44+08:00">2019-05-16</time>
               
             
           </span>
@@ -386,7 +386,26 @@
           
             <p>Two methods are used to switch the grapic card: Bumblebee or Prime.</p>
 <p>Bumblebee:</p>
-<p>Advantage:</p>
+<p>Advantage: Better performance, Easy to setting<br>Disadvantage: Not support anymore</p>
+<p>Prime:</p>
+<p>Advantage: Easy to setting<br>Disadvantage: Performance is not very good</p>
+<p>Bumblebee Setting:</p>
+<ol>
+<li><p>Install bumblebee, mesa, nvidia driver and xf86-video-intel(intel Xorg driver)<br>If 32-bit application support is needed, lib32-nvidia-utils is required.</p>
+</li>
+<li><p>Add regular user to the bumblebee group and enable bumblebeed.service</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$gpasswd</span> -a user bumblebee</span><br><span class="line"><span class="variable">$sudo</span> systemctl <span class="built_in">enable</span> bumblebeed.service</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Test</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> glxgears -info</span><br><span class="line">glxgears -info</span><br></pre></td></tr></table></figure>
+<p>compare the frame rates bewteen intel and nvidia GPU</p>
+<p>Trubleshooting:</p>
+<p>Cannot access secondary GPU” No devices detected with error:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR]Cannot access secondary GPU - error: [XORG] (EE) No devices detected.</span><br><span class="line">[ERROR]Aborting because fallback start is disabled.</span><br></pre></td></tr></table></figure>
+<p>Please remove the file /etc/X11/xorg.conf.d/20-intel.conf to somewhere else</p>
 
           
         
