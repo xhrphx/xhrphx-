@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-16 21:41:05" itemprop="dateModified" datetime="2019-05-16T21:41:05+08:00">2019-05-16</time>
+                <time title="Modified: 2019-05-16 21:43:45" itemprop="dateModified" datetime="2019-05-16T21:43:45+08:00">2019-05-16</time>
               
             
           </span>
@@ -403,18 +403,26 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> glxgears -info</span><br><span class="line">glxgears -info</span><br></pre></td></tr></table></figure>
 <p>compare the frame rates bewteen intel and nvidia GPU</p>
 <p>Trubleshooting:</p>
-<p>Cannot access secondary GPU” No devices detected with error:</p>
+<ol>
+<li>Cannot access secondary GPU” No devices detected with error:</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR]Cannot access secondary GPU - error: [XORG] (EE) No devices detected.</span><br><span class="line">[ERROR]Aborting because fallback start is disabled.</span><br></pre></td></tr></table></figure>
 <p>Please remove the file /etc/X11/xorg.conf.d/20-intel.conf to somewhere else</p>
-<p>If you use nouveau driver before, you could try switching to the nvidia driver.<br>Define the nvidia card in /etc/bumblebee/xorg.conf.nvidia, using the corrext BusId according to lspci output.</p>
+<ol start="2">
+<li>If you use nouveau driver before, you could try switching to the nvidia driver.<br>Define the nvidia card in /etc/bumblebee/xorg.conf.nvidia, using the corrext BusId according to lspci output.</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Section <span class="string">"Device"</span></span><br><span class="line">    Identifier <span class="string">"nvidiagpul"</span></span><br><span class="line">    Driver <span class="string">"nvidia"</span></span><br><span class="line">    BusID <span class="string">"PCI:0:1:0"</span></span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
-<p>With hp laptop, bbswitch do not work well</p>
+<ol start="3">
+<li>With hp laptop, bbswitch do not work well</li>
+</ol>
 <p>Black screan appear after the commend xstart to open windows manager.<br>Additioned command-line is needed in file /etc/default/grub</p>
 <p>Add the following opinion in GRUB_CMDLINE_LINUX to cheat the computer</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=! acpi_osi=<span class="string">'Windows 2009'</span></span><br></pre></td></tr></table></figure>
 <p>General usage:</p>
 <p>optirun application or primusrun application</p>
-<p>Bumblebee problem in steam game</p>
+<ol start="4">
+<li>Bumblebee problem in steam game</li>
+</ol>
 <p>To start a game in steam, don’t input the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> steam</span><br></pre></td></tr></table></figure></p>
 <p>It only run the steam application with GPU but not the game itself.</p>
 <p>You need to add optirun %command% into launch opinion.</p>
