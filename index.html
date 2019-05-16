@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-05-17 01:12:01" itemprop="dateCreated datePublished" datetime="2019-05-17T01:12:01+08:00">2019-05-17</time>
+              <time title="Created: 2019-05-17 02:42:56" itemprop="dateCreated datePublished" datetime="2019-05-17T02:42:56+08:00">2019-05-17</time>
             
 
             
@@ -389,12 +389,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> glxgears -info</span><br><span class="line">glxgears -info</span><br></pre></td></tr></table></figure>
 <p>compare the frame rates bewteen intel and nvidia GPU</p>
 <ol start="4">
-<li>General usage:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">optirun application or primusrun application</span><br></pre></td></tr></table></figure>
-</li>
+<li>General usage:</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">optirun application or primusrun application</span><br></pre></td></tr></table></figure>
 <p>Trubleshooting:</p>
 <ol>
-<li>Cannot access secondary GPU” No devices detected with error:</li>
+<li>“Cannot access secondary GPU” No devices detected with error.</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR]Cannot access secondary GPU - error: [XORG] (EE) No devices detected.</span><br><span class="line">[ERROR]Aborting because fallback start is disabled.</span><br></pre></td></tr></table></figure>
 <p>Please remove the file /etc/X11/xorg.conf.d/20-intel.conf to somewhere else</p>
@@ -403,20 +403,22 @@
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Section <span class="string">"Device"</span></span><br><span class="line">    Identifier <span class="string">"nvidiagpul"</span></span><br><span class="line">    Driver <span class="string">"nvidia"</span></span><br><span class="line">    BusID <span class="string">"PCI:0:1:0"</span></span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
 <ol start="3">
-<li>With hp laptop, bbswitch do not work well</li>
+<li>With hp laptop, bbswitch do not work well.</li>
 </ol>
 <p>Black screan appear after the commend xstart to open windows manager.<br>Additioned command-line is needed in file /etc/default/grub</p>
 <p>Add the following opinion in GRUB_CMDLINE_LINUX to cheat the computer</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=! acpi_osi=<span class="string">'Windows 2009'</span></span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li>Bumblebee problem in steam game</li>
+<li>Bumblebee and bbswitch have problem in steam game.</li>
 </ol>
-<p>To start a game in steam, don’t input the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> steam</span><br></pre></td></tr></table></figure></p>
+<p>To start a game in steam, don’t input the command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> steam</span><br></pre></td></tr></table></figure>
 <p>It only run the steam application with GPU but not the game itself.</p>
 <p>You need to add optirun %command% into launch opinion.</p>
-<p>For arch, you need to add the following setting into launch opinion due to some unknow bugs<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD=/usr/lib32/nvidia/libGL.so __GLVND_DISALLOW_PATCHING=1 optirun %<span class="built_in">command</span>%</span><br></pre></td></tr></table></figure></p>
+<p>For arch, you need to add the following setting into launch opinion due to some unknow bugs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD=/usr/lib32/nvidia/libGL.so __GLVND_DISALLOW_PATCHING=1 optirun %<span class="built_in">command</span>%</span><br></pre></td></tr></table></figure>
 <p>Reference:</p>
-<p>Hp bbswitch bug <a href="https://github.com/Bumblebee-Project/Bumblebee/issues/764" target="_blank" rel="noopener">Generating</a><br>Bumblebee archwiki <a href="https://wiki.archlinux.org/index.php/Bumblebee" target="_blank" rel="noopener">Generating</a><br>Steam: <a href="https://support.steampowered.com/kb_article.php?ref=6316-GJKC-7437" target="_blank" rel="noopener">Generating</a><br>Steam bug: <a href="https://github.com/VirtualGL/virtualgl/issues/16" target="_blank" rel="noopener">Generating</a></p>
+<p><a href="https://github.com/Bumblebee-Project/Bumblebee/issues/764" target="_blank" rel="noopener">Hp bbswitch bug</a><br><a href="https://wiki.archlinux.org/index.php/Bumblebee" target="_blank" rel="noopener">Bumblebee archwiki</a><br><a href="https://support.steampowered.com/kb_article.php?ref=6316-GJKC-7437" target="_blank" rel="noopener">Steam</a><br><a href="https://github.com/VirtualGL/virtualgl/issues/16" target="_blank" rel="noopener">Steam bug</a></p>
 
           
         
