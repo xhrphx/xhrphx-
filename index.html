@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/nvidia/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/nvidia/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -306,7 +306,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/10/nvidia/" class="post-title-link" itemprop="url">Nvidia graphic card setting in arch</a>
+                <a href="/2019/05/17/nvidia/" class="post-title-link" itemprop="url">Nvidia graphic card setting in arch</a>
               
             
           </h1>
@@ -331,25 +331,9 @@
                 
               
 
-              <time title="Created: 2019-05-10 16:44:59" itemprop="dateCreated datePublished" datetime="2019-05-10T16:44:59+08:00">2019-05-10</time>
+              <time title="Created: 2019-05-17 01:12:01" itemprop="dateCreated datePublished" datetime="2019-05-17T01:12:01+08:00">2019-05-17</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-16 23:38:18" itemprop="dateModified" datetime="2019-05-16T23:38:18+08:00">2019-05-16</time>
-              
             
           </span>
 
@@ -384,7 +368,9 @@
       
         
           
-            <p>Two methods are used to switch the grapic card: Bumblebee or Prime.</p>
+            <hr>
+<h2 id="date-2019-05-10-16-44-59"><a href="#date-2019-05-10-16-44-59" class="headerlink" title="date: 2019-05-10 16:44:59"></a>date: 2019-05-10 16:44:59</h2><hr>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>Two methods are used to switch the grapic card: Bumblebee or Prime.</p>
 <p>Bumblebee:</p>
 <p>Advantage: Better performance, Easy to setting<br>Disadvantage: Not support anymore</p>
 <p>Prime:</p>
@@ -429,6 +415,8 @@
 <p>It only run the steam application with GPU but not the game itself.</p>
 <p>You need to add optirun %command% into launch opinion.</p>
 <p>For arch, you need to add the following setting into launch opinion due to some unknow bugs<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD=/usr/lib32/nvidia/libGL.so __GLVND_DISALLOW_PATCHING=1 optirun %<span class="built_in">command</span>%</span><br></pre></td></tr></table></figure></p>
+<p>Reference:</p>
+<p>Hp bbswitch bug <a href="https://github.com/Bumblebee-Project/Bumblebee/issues/764" target="_blank" rel="noopener">Generating</a><br>Bumblebee archwiki <a href="https://wiki.archlinux.org/index.php/Bumblebee" target="_blank" rel="noopener">Generating</a><br>Steam: <a href="https://support.steampowered.com/kb_article.php?ref=6316-GJKC-7437" target="_blank" rel="noopener">Generating</a><br>Steam bug: <a href="https://github.com/VirtualGL/virtualgl/issues/16" target="_blank" rel="noopener">Generating</a></p>
 
           
         
