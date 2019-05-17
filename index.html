@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang>
+<html class="theme-next mist use-motion" lang>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +70,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '7.1.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
@@ -224,6 +224,57 @@
         
         
           
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -235,6 +286,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>Commonweal 404</a>
 
   </li>
 
@@ -331,7 +399,7 @@
                 
               
 
-              <time title="Created: 2019-05-17 02:42:56" itemprop="dateCreated datePublished" datetime="2019-05-17T02:42:56+08:00">2019-05-17</time>
+              <time title="Created: 2019-05-17 17:37:09" itemprop="dateCreated datePublished" datetime="2019-05-17T17:37:09+08:00">2019-05-17</time>
             
 
             
@@ -368,59 +436,21 @@
       
         
           
-            <hr>
-<h2 id="date-2019-05-10-16-44-59"><a href="#date-2019-05-10-16-44-59" class="headerlink" title="date: 2019-05-10 16:44:59"></a>date: 2019-05-10 16:44:59</h2><hr>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>Two methods are used to switch the grapic card: Bumblebee or Prime.</p>
-<p>Bumblebee:</p>
-<p>Advantage: Better performance, Easy to setting<br>Disadvantage: Not support anymore</p>
-<p>Prime:</p>
-<p>Advantage: Easy to setting<br>Disadvantage: Performance is not very good</p>
-<p>Bumblebee Setting:</p>
-<ol>
-<li><p>Install bumblebee, mesa, nvidia driver and xf86-video-intel(intel Xorg driver)<br>If 32-bit application support is needed, lib32-nvidia-utils is required.</p>
-</li>
-<li><p>Add regular user to the bumblebee group and enable bumblebeed.service</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$gpasswd</span> -a user bumblebee</span><br><span class="line"><span class="variable">$sudo</span> systemctl <span class="built_in">enable</span> bumblebeed.service</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Test</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> glxgears -info</span><br><span class="line">glxgears -info</span><br></pre></td></tr></table></figure>
-<p>compare the frame rates bewteen intel and nvidia GPU</p>
-<ol start="4">
-<li>General usage:</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">optirun application or primusrun application</span><br></pre></td></tr></table></figure>
-<p>Trubleshooting:</p>
-<ol>
-<li>“Cannot access secondary GPU” No devices detected with error.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR]Cannot access secondary GPU - error: [XORG] (EE) No devices detected.</span><br><span class="line">[ERROR]Aborting because fallback start is disabled.</span><br></pre></td></tr></table></figure>
-<p>Please remove the file /etc/X11/xorg.conf.d/20-intel.conf to somewhere else</p>
-<ol start="2">
-<li>If you use nouveau driver before, you could try switching to the nvidia driver.<br>Define the nvidia card in /etc/bumblebee/xorg.conf.nvidia, using the corrext BusId according to lspci output.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Section <span class="string">"Device"</span></span><br><span class="line">    Identifier <span class="string">"nvidiagpul"</span></span><br><span class="line">    Driver <span class="string">"nvidia"</span></span><br><span class="line">    BusID <span class="string">"PCI:0:1:0"</span></span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>With hp laptop, bbswitch do not work well.</li>
-</ol>
-<p>Black screan appear after the commend xstart to open windows manager.<br>Additioned command-line is needed in file /etc/default/grub</p>
-<p>Add the following opinion in GRUB_CMDLINE_LINUX to cheat the computer</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=! acpi_osi=<span class="string">'Windows 2009'</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Bumblebee and bbswitch have problem in steam game.</li>
-</ol>
-<p>To start a game in steam, don’t input the command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> steam</span><br></pre></td></tr></table></figure>
-<p>It only run the steam application with GPU but not the game itself.</p>
-<p>You need to add optirun %command% into launch opinion.</p>
-<p>For arch, you need to add the following setting into launch opinion due to some unknow bugs</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD=/usr/lib32/nvidia/libGL.so __GLVND_DISALLOW_PATCHING=1 optirun %<span class="built_in">command</span>%</span><br></pre></td></tr></table></figure>
-<p>Reference:</p>
-<p><a href="https://github.com/Bumblebee-Project/Bumblebee/issues/764" target="_blank" rel="noopener">Hp bbswitch bug</a><br><a href="https://wiki.archlinux.org/index.php/Bumblebee" target="_blank" rel="noopener">Bumblebee archwiki</a><br><a href="https://support.steampowered.com/kb_article.php?ref=6316-GJKC-7437" target="_blank" rel="noopener">Steam</a><br><a href="https://github.com/VirtualGL/virtualgl/issues/16" target="_blank" rel="noopener">Steam bug</a></p>
-
+            <p>
+              Two methods are used to switch the grapic card: Bumblebee or Prime.
+Bumblebee:
+Advantage: Better performance, Easy to settingDisadvantage: Not support
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/17/nvidia/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -557,17 +587,19 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+            <p>
+              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/10/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -658,6 +690,27 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
             </nav>
           
 
@@ -715,7 +768,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.1</div>
 
 
 
@@ -804,6 +857,7 @@
 
 
   <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
 
 
 
