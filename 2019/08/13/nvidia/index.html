@@ -96,14 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="Two methods are used to switch the grapic card: Bumblebee or Prime. Bumblebee: Advantage: Better performance, Easy to settingDisadvantage: Not support anymore Prime: Advantage: Easy to settingDisadvan">
+<meta name="keywords" content="Arch,Linux,Nvidia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nvidia graphic card setting in arch">
+<meta property="og:url" content="http://yoursite.com/2019/08/13/nvidia/index.html">
 <meta property="og:site_name" content="Minions&#39;s Blog">
+<meta property="og:description" content="Two methods are used to switch the grapic card: Bumblebee or Prime. Bumblebee: Advantage: Better performance, Easy to settingDisadvantage: Not support anymore Prime: Advantage: Easy to settingDisadvan">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-17T09:36:57.342Z">
+<meta property="og:updated_time" content="2019-08-13T10:06:02.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Nvidia graphic card setting in arch">
+<meta name="twitter:description" content="Two methods are used to switch the grapic card: Bumblebee or Prime. Bumblebee: Advantage: Better performance, Easy to settingDisadvantage: Not support anymore Prime: Advantage: Easy to settingDisadvan">
 
 
 
@@ -111,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/13/nvidia/">
 
 
 
@@ -121,7 +125,7 @@
   };
 </script>
 
-  <title>tags | Minions's Blog</title>
+  <title>Nvidia graphic card setting in arch | Minions's Blog</title>
   
 
 
@@ -241,7 +245,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -314,31 +318,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -365,72 +344,211 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/nvidia/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu,Haoran">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Minions's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">Nvidia graphic card setting in arch
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              4 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/Arch/" style="font-size: 30px; color: #111">Arch</a> <a href="/tags/Linux/" style="font-size: 30px; color: #111">Linux</a> <a href="/tags/Nvidia/" style="font-size: 12px; color: #ccc">Nvidia</a> <a href="/tags/vpn/" style="font-size: 12px; color: #ccc">vpn</a>
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-13 18:06:02" itemprop="dateCreated datePublished" datetime="2019-08-13T18:06:02+08:00">2019-08-13</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Two methods are used to switch the grapic card: Bumblebee or Prime.</p>
+<p>Bumblebee:</p>
+<p>Advantage: Better performance, Easy to setting<br>Disadvantage: Not support anymore</p>
+<p>Prime:</p>
+<p>Advantage: Easy to setting<br>Disadvantage: Performance is not very good</p>
+<p>Bumblebee Setting:</p>
+<ol>
+<li><p>Install bumblebee, mesa, nvidia driver and xf86-video-intel(intel Xorg driver)<br>If 32-bit application support is needed, lib32-nvidia-utils is required.</p>
+</li>
+<li><p>Add regular user to the bumblebee group and enable bumblebeed.service</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$gpasswd</span> -a user bumblebee</span><br><span class="line"><span class="variable">$sudo</span> systemctl <span class="built_in">enable</span> bumblebeed.service</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Test</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> glxgears -info</span><br><span class="line">glxgears -info</span><br></pre></td></tr></table></figure>
+<p>compare the frame rates bewteen intel and nvidia GPU</p>
+<ol start="4">
+<li>General usage:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">optirun application or primusrun application</span><br></pre></td></tr></table></figure>
+<p>Trubleshooting:</p>
+<ol>
+<li>“Cannot access secondary GPU” No devices detected with error.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ERROR]Cannot access secondary GPU - error: [XORG] (EE) No devices detected.</span><br><span class="line">[ERROR]Aborting because fallback start is disabled.</span><br></pre></td></tr></table></figure>
+<p>Please remove the file /etc/X11/xorg.conf.d/20-intel.conf to somewhere else</p>
+<ol start="2">
+<li>If you use nouveau driver before, you could try switching to the nvidia driver.<br>Define the nvidia card in /etc/bumblebee/xorg.conf.nvidia, using the corrext BusId according to lspci output.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Section <span class="string">"Device"</span></span><br><span class="line">    Identifier <span class="string">"nvidiagpul"</span></span><br><span class="line">    Driver <span class="string">"nvidia"</span></span><br><span class="line">    BusID <span class="string">"PCI:0:1:0"</span></span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>With hp laptop, bbswitch do not work well.</li>
+</ol>
+<p>Black screan appear after the commend xstart to open windows manager.<br>Additioned command-line is needed in file /etc/default/grub</p>
+<p>Add the following opinion in GRUB_CMDLINE_LINUX to cheat the computer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=! acpi_osi=<span class="string">'Windows 2009'</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>Bumblebee and bbswitch have problem in steam game.</li>
+</ol>
+<p>To start a game in steam, don’t input the command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$optirun</span> steam</span><br></pre></td></tr></table></figure>
+<p>It only run the steam application with GPU but not the game itself.</p>
+<p>You need to add optirun %command% into launch opinion.</p>
+<p>For arch, you need to add the following setting into launch opinion due to some unknow bugs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD=/usr/lib32/nvidia/libGL.so __GLVND_DISALLOW_PATCHING=1 optirun %<span class="built_in">command</span>%</span><br></pre></td></tr></table></figure>
+<p>Reference:</p>
+<p><a href="https://github.com/Bumblebee-Project/Bumblebee/issues/764" target="_blank" rel="noopener">Hp bbswitch bug</a><br><a href="https://wiki.archlinux.org/index.php/Bumblebee" target="_blank" rel="noopener">Bumblebee archwiki</a><br><a href="https://support.steampowered.com/kb_article.php?ref=6316-GJKC-7437" target="_blank" rel="noopener">Steam</a><br><a href="https://github.com/VirtualGL/virtualgl/issues/16" target="_blank" rel="noopener">Steam bug</a></p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Arch/" rel="tag"># Arch</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Nvidia/" rel="tag"># Nvidia</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/13/pptp/" rel="next" title="Set up pptp vpn">
+                <i class="fa fa-chevron-left"></i> Set up pptp vpn
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
