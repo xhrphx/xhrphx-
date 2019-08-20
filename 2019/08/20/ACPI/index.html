@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Minions&#39;s Blog">
 <meta property="og:description" content="Laptop freezes when starting X11 and discrete graphics are OFFLockup issue (lspci hangs)Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.Applies to: newer laptops with GTX 96">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-20T03:48:23.272Z">
+<meta property="og:updated_time" content="2019-08-20T03:51:22.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ACPI problem">
 <meta name="twitter:description" content="Laptop freezes when starting X11 and discrete graphics are OFFLockup issue (lspci hangs)Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.Applies to: newer laptops with GTX 96">
@@ -401,7 +401,7 @@
                 
               
 
-              <time title="Created: 2019-08-20 11:48:23" itemprop="dateCreated datePublished" datetime="2019-08-20T11:48:23+08:00">2019-08-20</time>
+              <time title="Created: 2019-08-20 11:51:22" itemprop="dateCreated datePublished" datetime="2019-08-20T11:51:22+08:00">2019-08-20</time>
             
 
             
@@ -436,9 +436,7 @@
       
 
       
-        <p>Laptop freezes when starting X11 and discrete graphics are OFF<br>Lockup issue (lspci hangs)<br>Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.<br>Applies to: newer laptops with GTX 965M or alike when bbswitch (e.g. via Bumblebee) or nouveau is in use.</p>
-<p>When the dGPU power resource is turned on, it may fail to do so and hang in ACPI code</p>
-<p>For known model-specific workarounds, see this issue. In other cases you can try to boot with the command added to your Kernel parameters.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=<span class="string">"!Windows 2015"</span> </span><br><span class="line">or </span><br><span class="line">acpi_osi=! acpi_osi=<span class="string">"Windows 2009"</span></span><br></pre></td></tr></table></figure></p>
+        <p>Laptop freezes when starting X11 and discrete graphics are OFF<br>Lockup issue (lspci hangs)<br>Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.<br>Applies to: newer laptops with GTX 965M or alike when bbswitch (e.g. via Bumblebee) or nouveau is in use.<br>When the dGPU power resource turned on, it may fail to do so and hang in ACPI code<br>In other cases you can try to boot with the command added to your Kernel parameters.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=<span class="string">"!Windows 2015"</span> </span><br><span class="line">or </span><br><span class="line">acpi_osi=! acpi_osi=<span class="string">"Windows 2009"</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
