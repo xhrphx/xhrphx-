@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Minions&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/05/index.html">
+  <meta name="description" content="Laptop freezes when starting X11 and discrete graphics are OFFLockup issue (lspci hangs)Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.Applies to: newer laptops with GTX 96">
+<meta name="keywords" content="Arch,Linux,Nvidia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACPI problem">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/ACPI/index.html">
 <meta property="og:site_name" content="Minions&#39;s Blog">
+<meta property="og:description" content="Laptop freezes when starting X11 and discrete graphics are OFFLockup issue (lspci hangs)Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.Applies to: newer laptops with GTX 96">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-20T03:48:23.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Minions&#39;s Blog">
+<meta name="twitter:title" content="ACPI problem">
+<meta name="twitter:description" content="Laptop freezes when starting X11 and discrete graphics are OFFLockup issue (lspci hangs)Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.Applies to: newer laptops with GTX 96">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/2019/05/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/20/ACPI/">
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>Archive | Minions's Blog</title>
+  <title>ACPI problem | Minions's Blog</title>
   
 
 
@@ -168,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,7 +279,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -313,31 +318,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -362,78 +342,176 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 5 posts in total. Keep on posting.
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/ACPI/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu,Haoran">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Minions's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/10/hello-world/" itemprop="url">
-            
-              <span itemprop="name">Hello World</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">ACPI problem
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-10T13:22:51+08:00" content="2019-05-10">
-          05-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-20 11:48:23" itemprop="dateCreated datePublished" datetime="2019-08-20T11:48:23+08:00">2019-08-20</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>Laptop freezes when starting X11 and discrete graphics are OFF<br>Lockup issue (lspci hangs)<br>Symptoms: lspci hangs, system suspend fails, shutdown hangs, optirun hangs.<br>Applies to: newer laptops with GTX 965M or alike when bbswitch (e.g. via Bumblebee) or nouveau is in use.</p>
+<p>When the dGPU power resource is turned on, it may fail to do so and hang in ACPI code</p>
+<p>For known model-specific workarounds, see this issue. In other cases you can try to boot with the command added to your Kernel parameters.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">acpi_osi=<span class="string">"!Windows 2015"</span> </span><br><span class="line">or </span><br><span class="line">acpi_osi=! acpi_osi=<span class="string">"Windows 2009"</span></span><br></pre></td></tr></table></figure></p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Arch/" rel="tag"># Arch</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Nvidia/" rel="tag"># Nvidia</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/14/pptp/" rel="next" title="Set up pptp vpn">
+                <i class="fa fa-chevron-left"></i> Set up pptp vpn
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -654,6 +732,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -669,6 +751,8 @@
 
   
 
+
+  
 
 
   
