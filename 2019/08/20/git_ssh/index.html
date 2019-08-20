@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration123cd ~/.sshtou">
+  <meta name="description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration  123cd ~/.ssht">
 <meta name="keywords" content="Arch,Linux,ssh-key">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git-ssh setting">
 <meta property="og:url" content="http://yoursite.com/2019/08/20/git_ssh/index.html">
 <meta property="og:site_name" content="Minions&#39;s Blog">
-<meta property="og:description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration123cd ~/.sshtou">
+<meta property="og:description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration  123cd ~/.ssht">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-20T07:13:04.995Z">
+<meta property="og:updated_time" content="2019-08-20T07:15:38.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git-ssh setting">
-<meta name="twitter:description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration123cd ~/.sshtou">
+<meta name="twitter:description" content="Create ssh-key  123cd ~/.shssh-keygen -t rsa -C usermail vim id_rsa.pub  Login to github  Menu -&amp;gt; Settings -&amp;gt; SSH and GPG keys Copy the ssh-key from id_rsa.pub  SSH configuration  123cd ~/.ssht">
 
 
 
@@ -401,7 +401,7 @@
                 
               
 
-              <time title="Created: 2019-08-20 15:13:04" itemprop="dateCreated datePublished" datetime="2019-08-20T15:13:04+08:00">2019-08-20</time>
+              <time title="Created: 2019-08-20 15:15:38" itemprop="dateCreated datePublished" datetime="2019-08-20T15:15:38+08:00">2019-08-20</time>
             
 
             
@@ -446,9 +446,9 @@
 <p>Menu -&gt; Settings -&gt; SSH and GPG keys</p>
 <p>Copy the ssh-key from id_rsa.pub</p>
 <ol start="3">
-<li>SSH configuration<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">touch config</span><br><span class="line">chmod 600 config</span><br></pre></td></tr></table></figure>
-</li>
+<li>SSH configuration</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">touch config</span><br><span class="line">chmod 600 config</span><br></pre></td></tr></table></figure>
 <p>config:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User usermail</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure></p>
 <ol start="4">
 <li>Test<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
